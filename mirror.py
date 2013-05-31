@@ -6,9 +6,10 @@ def pal_huh(string):
     else:
         return False
 
-total = 0
+if __name__ == '__main__':
+    total = 0
 
-for i in range(0,1000000):
-    if (pal_huh(str(i)) and pal_huh(bin(i)[2:])):
-        print("{0} and {1} are palindromic".format(i, bin(i)[2:]))
-        total += i
+    for i in range(0,1000000):
+        if (pal_huh(str(i)) and pal_huh(bin(i)[2:])):
+            print("{0} and {1} are palindromic".format(i, bin(i)[2:]))
+            total += i

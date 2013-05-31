@@ -19,20 +19,18 @@ def pal_huh(string):
     else:
         return False
 
-total = 0
+if __name__ == '__main__':
+    total = 0
 
-for i in range(2**10):
-    b = bin(i)[2:]
-    b = reverse(str(b))
-    #print(b)
-    left = right_pad(b,10-len(b))
-    #print("length of b = {}".format(len(b)))
-    right = "{:010b}".format(i)
-    #print(left+right)
+    for i in range(2**10):
+        b = bin(i)[2:]
+        b = reverse(str(b))
+        left = right_pad(b,10-len(b))
+        right = "{:010b}".format(i)
 
-    num_10 = int(left+right,2)
-    if (num_10 == 585):
-        print(num_10)
-    if (num_10 < 1000000 and pal_huh(str(num_10))):
-        total += num_10
-        print(num_10)
+        num_10 = int(left+right,2)
+        if (num_10 == 585):
+            print(num_10)
+        if (num_10 < 1000000 and pal_huh(str(num_10))):
+            total += num_10
+            print(num_10)

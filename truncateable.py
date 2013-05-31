@@ -29,28 +29,25 @@ def right_to_left(n):
     else:
         return False
 
-NUM_PRIMES = 1000000
-print("right before getting {} primes".format(NUM_PRIMES))
-primes = faster_eratosthenes.sieve(NUM_PRIMES)
-truncateable_candidates = []
+if __name__ == '__main__':
+    NUM_PRIMES = 1000000
+    print("right before getting {} primes".format(NUM_PRIMES))
+    primes = faster_eratosthenes.sieve(NUM_PRIMES)
+    truncateable_candidates = []
 
-for prime in primes:
-    prime_string = str(prime)
-    if not prime_string.__contains__('4') and not prime_string.__contains__('6') and not prime_string.__contains__('8'): 
-        truncateable_candidates.append(prime)
-        #print("possible trucateable primes is now {}".format(truncateable_candidates))
+    for prime in primes:
+        prime_string = str(prime)
+        if not prime_string.__contains__('4') and not prime_string.__contains__('6') and not prime_string.__contains__('8'): 
+            truncateable_candidates.append(prime)
 
-#print(truncateable_candidates)
+    both = []
 
-both = []
+    for my_prime in truncateable_candidates:
+        if left_to_right(my_prime) and right_to_left(my_prime):
+            both.append(my_prime)
 
-for my_prime in truncateable_candidates:
-    #print("testing {} to see if it's truncateable".format(my_prime))
-    if left_to_right(my_prime) and right_to_left(my_prime):
-        both.append(my_prime)
+    both.remove(3)
+    both.remove(5)
+    both.remove(7)
 
-both.remove(3)
-both.remove(5)
-both.remove(7)
-
-print(both)
+    print(both)
