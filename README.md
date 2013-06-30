@@ -9,7 +9,7 @@ over at the [SUNY Postdam ACM wiki](http://cs.potsdam.edu/ACM) to keep track of
 who was on top.
 
 All of these solutions came before I had any regard for data structures, best
-python practices, and efficiancy in general. Nevertheless, I present solutions
+python practices, or efficiency in general. Nevertheless, I present solutions
 to the first 50 or so [Project Euler](http://projecteuler.net) problems.
 
 ### Authors
