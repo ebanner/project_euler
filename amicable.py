@@ -16,16 +16,16 @@ def d(n):
         total += divisor
     return total
 
-NUM = 10000
+if name == '__main__':
+    NUM = 10000
+    amicable = []
 
-amicable = []
+    for a in range(1,NUM):
+        b = d(a)
+        if (d(b) == a and a != b):
+            amicable.append(a)
+            amicable.append(b)
 
-for a in range(1,NUM):
-    b = d(a)
-    if (d(b) == a and a != b):
-        amicable.append(a)
-        amicable.append(b)
+        print("d({0}) = {1}".format(a, d(a)))
 
-    print("d({0}) = {1}".format(a, d(a)))
-
-print(amicable)
+    print(amicable)

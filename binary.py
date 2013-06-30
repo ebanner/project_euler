@@ -1,22 +1,23 @@
-f = open('triangle.txt', 'r')
-lines = f.readlines()
+if __name__ == '__main__':
+    f = open('triangle.txt', 'r')
+    lines = f.readlines()
 
-lines = map(lambda line: line.strip('\n'), lines)
-lines = [line for line in lines]
+    lines = map(lambda line: line.strip('\n'), lines)
+    lines = [line for line in lines]
 
-array = []
+    array = []
 
-for line in lines:
-    array.append([line])
+    for line in lines:
+        array.append([line])
 
-tree = []
+    tree = []
 
-for element in range(len(array)):
-    tree.append(array[element][0].split())
+    for element in range(len(array)):
+        tree.append(array[element][0].split())
 
-for i in range(len(tree)):
-    for j in range(len(tree[i])):
-        print(tree[i][j], end=" ")
-        tree[i][j] = int(float(tree[i][j]))
-    print()
+    for i in range(len(tree)):
+        for j in range(len(tree[i])):
+            print(tree[i][j], end=" ")
+            tree[i][j] = int(float(tree[i][j]))
+        print()
 

@@ -8,13 +8,3 @@ def prime_huh(n):
         if (n % i == 0):
             return False
     return True
-
-#N = 2000000
-#SUM = 5
-#
-#for i in range(5, N, 1):
-#    if prime_huh(i):
-#        #print(i)
-#        SUM += i
-#
-#print("sum = {}".format(SUM))
